@@ -5,7 +5,9 @@ puts "----------"
 
 # Your code goes below here ...
 class Store < ActiveRecord::Base
-
+  has_many :employees
+  validates :name, length: { minimum: 2 }
+  validates :annual_revenue, numericality: {only_integer: true, greater_than: 0}
 end
 
 burnaby = Store.create(

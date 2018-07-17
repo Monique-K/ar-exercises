@@ -35,6 +35,6 @@ yaletown = Store.create(
   puts store.name, store.annual_revenue
 end
 
-@rich_womens_stores = Store.where(womens_apparel: true, annual_revenue:  (0..1000000000))
+@rich_womens_stores = Store.where(womens_apparel: true, annual_revenue: (0..1000000))
 
 puts @rich_womens_stores
